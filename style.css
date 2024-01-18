@@ -57,3 +57,93 @@ nav ul li a:hover {
     font-size: 3rem;
   }
 }
+
+/* New styles for the 8-bit fire effect and intro screen */
+#transerk {
+  background-image: url('https://media.tenor.com/images/e3aa4f0a0af3da024b59f34ba2ea0cad/tenor.gif'); /* Replace with the path to your 8-bit fire GIF */
+  background-size: cover;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.screen {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.screen.active {
+  display: flex;
+}
+
+.menu-item {
+  cursor: pointer;
+  animation: zoomIn 0.5s forwards;
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.5);
+  }
+}
+
+.star-wars-intro {
+  align-items: center;
+  overflow: hidden;
+  perspective: 400px;
+}
+
+.crawl {
+  position: relative;
+  top: 800px; /* Start off-screen */
+  transform-origin: 50% 100%;
+  animation: crawl 120s linear; /* Slower animation */
+  font-size: 24px; /* Larger font size */
+}
+
+/* Adjust the keyframes to make sure the text starts and ends off-screen */
+@keyframes crawl {
+  0% {
+    top: 100vh; /* Start below the bottom of the screen */
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% {
+    top: -250vh; /* Finish above the top of the screen */
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
+.crawl {
+  position: relative;
+  transform-origin: 50% 100%;
+  animation: crawl 120s linear forwards; /* Slower animation */
+  font-size: 36px; /* Much larger font size */
+  white-space: pre-wrap; /* Respect whitespace in your text */
+}
+
+/* Start the crawl immediately off the bottom of the screen */
+.star-wars-intro .crawl {
+  top: 150%; /* Adjust this value if needed */
+}
+
+/* Adjust the keyframes to make sure the text starts and ends off-screen */
+@keyframes crawl {
+  0% {
+    top: 150vh; /* Adjusted to start sooner */
+    transform: rotateX(20deg) translateZ(0);
+  }
+  100% {
+    top: -300vh; /* Finish above the top of the screen */
+    transform: rotateX(25deg) translateZ(-2500px);
+  }
+}
+
+

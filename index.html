@@ -8,17 +8,24 @@
   <link href="style.css" rel="stylesheet">
 </head>
 <body>
-  <main>
+  <div id="main-screen" class="screen active">
     <div class="container">
-      <h1 class="arcade-title">TRANSERK</h1>
-      <nav>
-        <ul>
-          <li><a href="#ethic">Ethic (New Game)</a></li>
-          <!-- Add additional menu items here -->
-        </ul>
-      </nav>
+      <h1 class="arcade-title" id="transerk">TRANSERK</h1>
+      <div id="new-game" class="menu-item">Ethic (New Game)</div>
     </div>
-  </main>
-  <!-- Include other content here -->
+  </div>
+  <div id="intro-screen" class="screen">
+    <div class="star-wars-intro">
+      <div class="crawl">
+        <div class="title">
+          <p>Ethic</p>
+          <h1>New Game</h1>
+        </div>
+        <p>To conquer the human mind is to capture the essence of all that is you.</p>
+        <!-- More text as needed -->
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
