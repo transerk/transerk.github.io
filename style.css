@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Press Start 2P', cursive;
+  color: #00FF00;
+  height: 100vh;
+  background: url('https://alec-coughlin.github.io/ezgif.com-gif-maker.gif') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  text-shadow: 2px 2px #000000;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px; /* Adjust the padding to position your content */
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 20px; /* Adjust the margin to space out the menu items */
+}
+
+nav ul li a {
+  color: #00FF00;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #FFFF00; /* Change color on hover */
+}
+
+.arcade-title {
+  font-size: 4rem; /* Adjust the font size as needed */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+  .arcade-title {
+    font-size: 3rem;
+  }
+}
